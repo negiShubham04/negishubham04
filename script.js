@@ -1,20 +1,20 @@
 /* Typing Effect */
 
-const text = "Hi, I'm Shubham";
-let i = 0;
+const text = "Hi, I'm Shubham Negi - Backend Engineer";
+let index = 0;
+let speed = 60;
 
-function typing() {
-    if (i < text.length) {
-        document.querySelector(".typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 80);
+function typeWriter() {
+    if (index < text.length) {
+        document.querySelector(".typing").textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
     }
 }
 
-typing();
+typeWriter();
 
-
-/* Scroll Reveal Animation */
+/* Scroll Reveal */
 
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
@@ -30,3 +30,15 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+
+/* Smooth Scroll Navigation */
+
+document.querySelectorAll("nav a").forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+    });
+});

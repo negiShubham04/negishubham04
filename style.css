@@ -38,14 +38,47 @@ body {
 
 header {
     text-align: center;
-    padding: 120px 20px;
+    padding: 160px 20px 120px;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 600;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
 }
 
-/* Navigation */
+header p {
+    font-size: 1.3rem;
+    opacity: 0.85;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 0.85;
+        transform: translateY(0);
+    }
+}
+
+/* Typing Cursor */
+
+.typing::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Navbar */
 
 nav {
     backdrop-filter: blur(15px);
@@ -56,12 +89,14 @@ nav {
     padding: 15px;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     transition: 0.3s;
+    font-weight: 500;
 }
 
 nav a:hover {
@@ -71,12 +106,12 @@ nav a:hover {
 /* Sections */
 
 section {
-    max-width: 900px;
-    margin: 100px auto;
+    max-width: 1000px;
+    margin: 140px auto;
     padding: 20px;
 }
 
-/* Glass Card */
+/* Glass Cards */
 
 .card {
     background: rgba(255,255,255,0.05);
@@ -92,25 +127,27 @@ section {
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-/* Skills Grid */
+/* Skills Pills */
 
 .skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .skill-grid span {
+    padding: 12px 22px;
     background: rgba(255,255,255,0.08);
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
+    border-radius: 50px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 .skill-grid span:hover {
     background: #6366f1;
+    transform: scale(1.1);
 }
 
 /* Scroll Reveal */
