@@ -1,49 +1,135 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Animated Gradient Background */
+
+.bg-animation {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        #0f172a,
+        #1e3a8a,
+        #9333ea,
+        #0f172a
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
 
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 120px 20px;
 }
 
+header h1 {
+    font-size: 3rem;
+}
+
+/* Navigation */
+
 nav {
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
     display: flex;
     justify-content: center;
-    gap: 20px;
-    background: #1e293b;
+    gap: 30px;
     padding: 15px;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    transition: 0.3s;
 }
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Sections */
 
 section {
-    padding: 60px 20px;
     max-width: 900px;
-    margin: auto;
+    margin: 100px auto;
+    padding: 20px;
 }
 
+/* Glass Card */
+
 .card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 20px 0;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Skills Grid */
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-grid span {
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    text-align: center;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: scale(1.02);
+.skill-grid span:hover {
+    background: #6366f1;
 }
+
+/* Scroll Reveal */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #020617;
+    padding: 40px;
+    opacity: 0.7;
 }
