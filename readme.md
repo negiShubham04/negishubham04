@@ -1,7 +1,9 @@
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=negishubham04&show_icons=true&theme=tokyonight)
+![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=negiShubham04&theme=tokyonight)
 
-![GitHub Streak](https://streak-stats.demolab.com?user=negishubham04&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=negiShubham04&show_icons=true&theme=tokyonight)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=negishubham04&layout=compact&theme=tokyonight)
+![GitHub Streak](https://streak-stats.demolab.com?user=negiShubham04&theme=tokyonight)
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=negishubham04&theme=tokyo-night)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=negiShubham04&layout=compact&theme=tokyonight)
+
+![Commit Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=negiShubham04&theme=tokyonight)
